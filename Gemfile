@@ -30,11 +30,19 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development, :test do
+#group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
-end
+ # gem 'byebug', platform: :mri
+ #end
 
+ group :development, :test do
+   gem 'byebug'
+   gem 'rspec-rails', '~> 3.0'
+   gem 'capybara'
+   gem 'database_cleaner'
+   gem 'factory_girl_rails', '~> 4.7'
+ end
+ 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
