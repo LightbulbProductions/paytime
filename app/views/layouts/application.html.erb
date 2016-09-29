@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Overtime</title>
+  <title>Payment</title>
     <%= csrf_meta_tags %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -18,7 +18,7 @@
 	</div>
 </div>
 
-
+<%= js add_gritter(flash[:notice], title:"Notification For You", sticky: false, image: :notice) %>
 
 </body>
 </html>
