@@ -5,7 +5,6 @@
     <%= csrf_meta_tags %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-
 </head>
 <body>
 
@@ -18,7 +17,7 @@
 	</div>
 </div>
 
-<%= js add_gritter(flash[:notice], title:"Notification For You", sticky: false, image: :notice) %>
+<%= render 'shared/alerts' %>
 
 </body>
 </html>

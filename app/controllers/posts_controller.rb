@@ -1,9 +1,14 @@
 class PostsController < ApplicationController
-	before_action :set_post, only: [:show, :edit, :update, :destroy]
+	before_action :set_post, only: [:show, :edit, :update, :destroy, :approve]
 	
 	def index
-		@posts = Post.all
-	end
+		@posts = Post.post_by current_user
+  
+  def approve 
+    authorize @post
+    @post.approved!
+    redirect_to root_path, notice: "This post has been approved"
+  end
 
 	def new
 		@post = Post.new
@@ -21,9 +26,12 @@ class PostsController < ApplicationController
 	end
 
 	def edit
+    authorize @post
 	end
 
 	def update
+    authorize @post
+    
 		if @post.update(post_params)
 			redirect_to @post, notice: 'Your post was edited successfully'
 		else
