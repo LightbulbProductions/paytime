@@ -2,7 +2,8 @@ class PostsController < ApplicationController
 	before_action :set_post, only: [:show, :edit, :update, :destroy, :approve]
 	
 	def index
-		@posts = Post.post_by current_user
+		@posts = Post.posts_by current_user
+  end
   
   def approve 
     authorize @post
@@ -50,7 +51,7 @@ class PostsController < ApplicationController
 	private
 
 	  def post_params
-	  	params.require(:post).permit(:date, :rationale, :status)
+	  	params.require(:post).permit(:date, :rationale, :status, :overtime_request)
 	  end
 
 	  def set_post
