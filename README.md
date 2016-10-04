@@ -13,3 +13,5 @@ in the admin  & users  dashboard controllers - changed searchability by making a
 in the admin/posts = same change in attributes, leaving rationale true only 
 
 ^^ probably going to change these bits
+
+Struct for mimicking DB. Awesomeness 
