@@ -15,3 +15,7 @@ in the admin/posts = same change in attributes, leaving rationale true only
 ^^ probably going to change these bits
 
 Struct for mimicking DB. Awesomeness 
+
+Reminder: Do not put all functionality in background rake task. Use only simple logic; put inside lib/file complicated functions for debugging ease
+
+**regexpal is pretty nifty**
