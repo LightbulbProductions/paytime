@@ -39,7 +39,7 @@ class ApplicationPolicy
   end
   
   def admin_types
-    ["AminUser"]
+    ["AdminUser"]
   end
 
   class Scope
