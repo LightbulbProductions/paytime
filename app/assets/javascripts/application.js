@@ -16,3 +16,4 @@
 //= require gritter
 //= require turbolinks
 //= require_tree .
+//= require pagination
