@@ -1,22 +1,20 @@
 <div class="container-fluid">
-<div class="pending_overtime_approvals row">
-  <div class="homepage_block col-md-3">
-	<p>some content</p>
+ <div class="pending-homepage row">
+	 <h2>Items Pending Approval</h2>
+	 <hr>
+	<%= render partial: "pending_approval", locals: { pending_approvals: @pending_approvals } %>
+ </div>
+ 
+  <div class="pending-homepage row">
+	<h2>Confirmation Log</h2>
+	<hr>
+	
+	<%= render partial: "confirmation_log", locals: { recent_audit_items: @recent_audit_items } %>
+	
+	<div class="clear-fix"></div>
+	
+	<hr>
+	
+	<%= link_to "View All Items", audit_logs_path, class: "btn btn-primary" %>
   </div>
-
-  <div class="homepage_block col-md-3">
-	<p>some content</p>
-  </div>
-
-  <div class="homepage_block col-md-3">
-	<p>some content</p>
-  </div>
-
-  <div class="homepage_block col-md-3">
-	<p>some content</p>
-  </div>
-</div>
-
-<div class="pending_submissions row">
-</div>
 </div>
