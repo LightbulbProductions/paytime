@@ -21,3 +21,5 @@ Reminder: Do not put all functionality in background rake task. Use only simple 
 **regexpal is pretty nifty**
 
 kaminari _paginator.html.erb to override templates_
+
+TODO: change mailer email to proper domain
