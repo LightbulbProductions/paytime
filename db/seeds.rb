@@ -18,16 +18,12 @@ puts "1 Admin user created"
 
   AuditLog.create!(user_id: @employee.id, status: 0, start_date: (Date.today - 6.days))
   AuditLog.create!(user_id: @employee.id, status: 0, start_date: (Date.today - 13.days))
-  AuditLog.create!(user_id: @employee.id, status: 0, start_date: (Date.today - 29.days))
+  AuditLog.create!(user_id: @employee.id, status: 0, start_date: (Date.today - 20.days))
 
 puts "3 audit logs have been created"
 
 100.times do |post|
-  Post.create!(date: Date.today, rationale: "#{post} rationale content  I must have had a longish sleep, for, when 
-  I woke, the stars were shining down on my face. Sounds of the countryside came 
-  faintly in, and the cool night air, veined with smells' of earth and salt, fanned my 
-  cheeks. The marvelous peace of the sleepbound summer night flooded through me 
-  like a tide.", user_id: @employee.id, overtime_request: 2.5)
+  Post.create!(date: Date.today, rationale: "#{post} rationale content  I must have had a longish sleep, for, when I woke, the stars were shining down on my face. Sounds of the countryside came faintly in, and the cool night air, veined with smells' of earth and salt, fanned my cheeks. The marvelous peace of the sleepbound summer night flooded through me like a tide.", user_id: @employee.id, overtime_request: 2.5)
 end
 
 puts "100 Posts have been created"
